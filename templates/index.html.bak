@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SignSpeak AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="brand">SignSpeak <span class="accent">AI</span></h1>
+            <nav class="nav">
+                <a href="#how">How it works</a>
+                <a href="#demo">Try</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <h2>Translate sign language to text</h2>
+                <p class="lead">Upload or record a short 5-second video of a sign gesture. Our model returns the predicted text instantly.</p>
+                <div class="cta-row">
+                    <button class="btn primary" id="predict-btn"><i class="fa-solid fa-play me"></i> Predict</button>
+                    <button class="btn ghost" id="reset-btn"><i class="fa-solid fa-rotate-left me"></i> Reset</button>
+                </div>
+            </div>
+            <div class="hero-right white-card">
+                <!-- Existing app content (video, inputs, outputs) will be injected here -->
+                <div class="section-header">Video Input</div>
+                <div id="video-box" class="media-placeholder">Your video will appear here</div>
+                <div class="section-header" style="margin-top:12px">Prediction</div>
+                <div class="output-text"><textarea readonly placeholder="Predicted text appears here"></textarea></div>
+            </div>
+        </section>
+
+        <div class="main-title">
+            <p>Upload or record a 5-second video of sign language gesture.</p>
+            <div id="countdown-timer" class="countdown">Recording... <span id="timer-sec">5</span>s</div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
